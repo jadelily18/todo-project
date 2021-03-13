@@ -1,0 +1,12 @@
+.todoAppContainer {
+    margin-top: 1.5rem;
+}
+
+.todoTitle {
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+
