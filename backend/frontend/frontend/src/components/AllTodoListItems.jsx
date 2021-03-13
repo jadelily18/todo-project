@@ -11,7 +11,7 @@ class AllTodoListItems extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/api/todo-all')
+        fetch('http://localhost:8000/api/todo-list-create')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ todoItems: data })

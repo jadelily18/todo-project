@@ -35,7 +35,7 @@ function AddTodoForm() {
 
         console.log(data)
 
-        axios.post('http://localhost:8000/api/todo-all/', data, {
+        axios.post('http://localhost:8000/api/todo-list-create/', data, {
             headers: {'X-CSRFToken': csrfToken}
         })
 
