@@ -11,5 +11,6 @@ router.register(r'todo-all', views.TodoListCreate)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html')),
-    path('api/todo-list-create/', views.TodoListCreate.as_view())
+    path('api/todo-list-create/', views.TodoListCreate.as_view()),
+    path('api/todo-delete/<pk>', views.TodoDelete.as_view()),
 ]
