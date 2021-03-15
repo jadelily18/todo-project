@@ -20,7 +20,7 @@ function AddTodoModal(props) {
                 size='lg'
             >
                 <Modal.Header closeButton>
-                    <h2>Add Item</h2>
+                    <h2>Add 'Todo' Item</h2>
                 </Modal.Header>
                 <Modal.Body>
                     <AddTodoForm closeModal={closeModal} reloadPage={props.reloadPage} getAllTodo={props.getAllTodo} getCookie={props.getCookie}/>
@@ -30,8 +30,6 @@ function AddTodoModal(props) {
         </div>
 
     )
-
-
 }
 
 export default AddTodoModal

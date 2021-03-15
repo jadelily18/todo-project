@@ -19,3 +19,14 @@ class TodoDelete(generics.DestroyAPIView):
     def perform_destroy(self, instance):
         return instance.delete()
 
+
+class TodoUpdate(generics.UpdateAPIView):
+    serializer_class = TodoSerializer
+
+    def get_queryset(self):
+        queryset = Todo.objects.filter(pk=self.kwargs['pk'])
+        return queryset
+
+    def perform_update(self, serializer):
+        return serializer.save()
+

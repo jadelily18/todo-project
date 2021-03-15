@@ -13,4 +13,5 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
     path('api/todo-list-create/', views.TodoListCreate.as_view()),
     path('api/todo-delete/<pk>', views.TodoDelete.as_view()),
+    path('api/todo-update/<pk>', views.TodoUpdate.as_view()),
 ]

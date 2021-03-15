@@ -47,7 +47,7 @@ class AddTodoForm extends React.Component {
 
     handleFormUpdate(event) {
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.type === 'checkbox' ? event.target.checked : event.target.value
         })
         console.log(this.state)
     }
@@ -58,14 +58,14 @@ class AddTodoForm extends React.Component {
             <Form onSubmit={(e) => this.handleFormSubmit(e)}>
                 <Form.Group controlId='titleForm'>
                     <Form.Label>Title</Form.Label>
-                    <Form.Control name='title' onChange={this.handleFormUpdate} placeholder='Do.... something?'/>
+                    <Form.Control name='title' onChange={this.handleFormUpdate} placeholder='Do.. something!'/>
                 </Form.Group>
                 <Form.Group controlId='descriptionForm'>
                     <Form.Label>Description</Form.Label>
-                    <Form.Control name='details' onChange={this.handleFormUpdate} as='textarea' rows='5' placeholder='Idk'/>
+                    <Form.Control name='details' onChange={this.handleFormUpdate} as='textarea' rows='5' placeholder='Add a description!'/>
                 </Form.Group>
                 <Form.Group controlId='completedForm'>
-                    <Form.Check name='completed' onChange={this.handleFormUpdate} label='Completed'/>
+                    <Form.Check name='completed' onChange={this.handleFormUpdate} checked={this.state.completed} label='Completed'/>
                 </Form.Group>
                 <Button type='submit' variant='outline-primary' block>Add</Button>
             </Form>
